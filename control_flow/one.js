@@ -13,10 +13,10 @@ const temperature = 41
 
 const score = 200
 
-if (score > 100) {
-    let power = "fly"
-    console.log(`User power: ${power}`);
-}
+// if (score > 100) {
+//     let power = "fly"
+//     console.log(`User power: ${power}`);
+// }
 
 // console.log(`User power: ${power}`);
 
@@ -34,9 +34,18 @@ if (score > 100) {
 
 const userLoggedIn = true 
 const debitCard = true 
+const loggedInFromGoogle = false
+const loggedInFromEmail = true 
 
 if (userLoggedIn && debitCard) {
     console.log("allow to buy courses");
-} else {
-    console.log("you are not eligible to buy the courses");
+} 
+// else {
+//     console.log("you are not eligible to buy the courses");
+// }
+if (loggedInFromGoogle || loggedInFromEmail){  //yeh jo hai "||" na yeh hindi vale ya ki tarah kaam karega ki ya toh ya phir isse 
+    console.log("user logged in");
+}
+else {
+    console.log("login please");
 }
