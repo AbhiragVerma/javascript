@@ -27,3 +27,4 @@ do {
     console.log(`your score is ${score}`);
     score ++
 } while (score <= 10);
+// do while loop me kaam pehle hota hai condition baad me dekhte hai 
