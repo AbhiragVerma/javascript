@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chai aur Code | DOM</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chai aur Code | DOM</title>
 </head>
-<body style="background-color: #212121; color: white;">
-    <ul class="language">
-        <li>Javascript</li>
-    </ul>
+<body style="background-color: #121212; color: white;">
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+
+  <script>
+      function addLanguage(LangName) {
+          const li = document.createElement('li');
+          li.innerHTML = `${LangName}`;
+          document.querySelector('.language').appendChild(li);
+        }
+        
+        // 💡 DOM is already loaded because script is at the bottom
+        addLanguage("Python");
+        addLanguage("typscript");
+        addLanguage("mongoDB");
+        
+        function addOptiLangauge(langName){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptiLangauge("golang");
+        
+        // edit 
+        const secondLang = doument.querySelector("li:nth-child(1)")
+        // secondLang.innerHTML = "Mojo"
+        const newli = document.createElement('li')
+        newli.textContent = "Mojo"
+        secondLang.replaceWith(newli);
+    </script>
 </body>
-<script>
-    function addLanguauge(LangName) {
-        const li = document.createElement('li');
-        li.innerHTML = `${LangName}`
-        document.querySelector('.language')
-        .appendchild(li)
-    }
-    addLanguage("python");
-</script>
 </html>
